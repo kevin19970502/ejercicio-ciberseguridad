@@ -1,16 +1,16 @@
-import socket # para ejecutar una conexion
-import sys   #cierre del programa
+import socket 
+import sys   
 import argparse
 
-#pasar el argumento a parse, obtener el domionio en parser
+
 parser=argparse.ArgumentParser()
 parser.add_argument('-t','--target', help='indicar el dominio de la victima')
 parser=parser.parse_args() 
 
 def banner(IP,port):
-	s=socket.socket()# generamos una coneccion
-	s.connect((IP,port))#ejecutamos la coneccion
-	print (str(s.recv(1024)))# lo que reciva lo va enviar paa nostros leer   --1024 son bit
+	s=socket.socket()
+	s.connect((IP,port))
+	print (str(s.recv(1024)))
 def main():
 	if parser.target:
 		IP=parser.target
