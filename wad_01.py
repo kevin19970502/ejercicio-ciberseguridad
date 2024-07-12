@@ -1,7 +1,5 @@
-#verificar si tienes instalado was
-# wad permite ver que tecnologias se estan apliacando ejecutando de un servidor web ver tipo servidor
 
-import subprocess # ejecutar comando de cmd
+import subprocess 
 import argparse
 import sys
 
@@ -11,7 +9,7 @@ parser=parser.parse_args()
 
 def main():
 	if parser.target:
-		subprocess.call("wad -u"+parser.target+"> tecnologias.txt", shell=True) #ejecutar comando(wad -u(pedir que le pase un parametro)) con run
+		subprocess.call("wad -u"+parser.target+"> tecnologias.txt", shell=True) 
 
 	else:
 		print("(+)Ingresa una URL")
